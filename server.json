@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(express.static(_dirname +'/dist'));
+app.use(express.static(_dirname +'/dist/ProjectTemplate'));
 
 app.listen(process.env.PORT || 8080);
 //pATHlOCATIONsTRATEGY
 app.get('/*', function(req, res){
-	res.senddFile(path.join(_dirname  + 'dist/index.html'));
+	res.senddFile(path.join(_dirname  + 'dist/ProjectTemplate/index.html'));
 })
 console.log('loading listening!');
